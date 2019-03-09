@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "webpack": "webpack -w",
-    "sass": "sass --watch src/client/css/critical.scss:dist/styles.css src/client/css/main.scss:dist/main.css",
+    "sass": "sass --watch src/client/critical.scss:dist/css/styles.css src/client/main.scss:dist/css/main.css",
     "server": "nodemon src/server/index.js",
     "start": "webpack -p && sass src/client/css/critical.scss:dist/styles.css src/client/css/main.scss:dist/main.css && node src/server/index.js"
   },
@@ -22,6 +22,8 @@
     "babel-preset-react": "^6.24.1",
     "css-loader": "^2.1.0",
     "file-loader": "^3.0.1",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.5.0",
     "sass": "^1.16.1",
     "style-loader": "^0.23.1",
     "webpack": "^4.29.0",

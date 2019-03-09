@@ -1,13 +1,20 @@
 const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   mode: 'development',
   entry: path.resolve(__dirname, 'src/client/index.jsx'),
   output: {
-    filename: '[name].bundle.js',
-    chunkFilename: '[name].bundle.js',
+    filename: 'js/[name].bundle.js',
+    chunkFilename: 'js/[name].bundle.js',
+    publicPath: '',
     path: path.resolve(__dirname, 'dist')
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: 'src/client/index.html'
+    })
+  ],
   module: {
     rules: [{
       test: /.jsx?$/,
