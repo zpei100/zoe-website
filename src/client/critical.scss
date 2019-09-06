@@ -4,6 +4,8 @@
 
 body {
     margin: 0;
+    font-family: Lato;
+    overflow-x: hidden;
 }
 
 #app {
@@ -17,13 +19,103 @@ body {
 }
 
 #hero {
-    @extend %fullscreen;
-    @extend %container;
+    color: $hero-text-color;
+    @include laptop {
+        display: flex;
+        flex-flow: column;
+    
+        // place holder for dev
+        height: 1000px;
+        background-color: teal;
+        
+        .hero-button {
+            background-color: $hero-button-color;
+            white-space: nowrap;
+            font-weight: 600;
+            color: $hero-text-color;
+            border-color: transparent;
+        }
+    }
+}
+
+#nav-bar {
+    @include laptop {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+
+        #nav-links {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: center;
+        }
+
+        .nav-link {
+            margin: 0% 5%;
+            font-size: 1em;
+        }
+
+        .hero-button {
+            border-radius: 20px;
+            padding: 10px 25px;
+            font-size: 0.9em;
+        }
+    }
+}
+
+#hero-content-container {
+    padding: 10%;
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+
+    .hero-button {
+        border-radius: 20px;
+        padding: 10px 25px;
+        font-size: 0.9em;
+    }
+
+    #hero-content {
+        div {
+            margin: 4% 0;
+            max-width: 800px;
+        }
+    }
+
+    #hero-horizontal-rule {
+        background-color: $hero-button-color;
+        width: 10%;
+        height: 3px;
+        border-color: transparent;
+        display: inline-block;
+    }
+
+    #hero-title {
+        font-size: 3.6em;
+    }
+
+    #hero-description{
+        font-size: 1.2em;
+        letter-spacing: 0.1em;
+        font-weight: 400;
+        line-height: 150%;
+    }
+
+    .hero-button {
+        
+    }
+}
+
+#nav-logo {
+    background-color: $hero-button-color;
 }
 
 #widgets {
     grid-area: widgets;
+
+    .widget {
+
+    }
 }
 
-.widget {
-}
