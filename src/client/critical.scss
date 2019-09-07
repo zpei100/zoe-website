@@ -11,15 +11,146 @@ body {
 #app {
     @include laptop {
         display: grid;
-        grid-template-rows: 1fr auto;
+        grid-template-rows: repeat(3, auto);
         grid-template-areas: 
             "hero"
-            "widgets"
+            "page-content-container"
+            "footer"
     }
 }
 
+#page-content-wrapper {
+    display: flex;
+    justify-content: center;
+
+    #page-content-container {
+        grid-area: page-content-container;
+        display: grid;
+        grid-template-rows: repeat(6, 800px);
+        grid-template-areas: 
+            "what-we-do"
+            "case-studies"
+            "clients"
+            "our-services"
+            "contact-us"
+            "testimonials"
+    }
+
+    #what-we-do-section {
+        @include laptop {
+            display: flex;
+            max-width: 1100px;
+        }
+
+        .text-section {
+            width: 50%;
+            background-color:white;
+            color: black;
+            padding: 5%;
+
+            div {
+                margin: 2% 0;
+            }
+
+            .text-container {
+                margin: 8% 0;
+
+                .title {
+                    font-size: 3em;
+                    font-weight: 600;
+                    color: black;
+                    font-family: Vollkorn;
+                }
+    
+                .subtitle {
+                    font-size: 0.8em;
+                    font-weight: 400;
+                    color: lighten(grey, 5);
+                    letter-spacing: 2px;
+                }
+
+                .description {
+                    p {
+                        letter-spacing: 1px;
+                        font-weight: 300;
+                    }
+                }
+
+                button {
+                    border-radius: 0;
+                    border-color: black;
+                    border-width: 1px;
+                    padding: 20px 25px;
+                    color: grey;
+                    font-size: 0.8em;
+                    letter-spacing: 4px;
+                }
+            }
+        }
+
+        .image-section {
+            width: 50%;
+            background-color:black;
+            color: white;
+
+        }
+    }
+}
+
+#footer {
+    grid-area: footer;
+}
+
+#what-we-do-section {
+    grid-area: what-we-do;
+    background-color: blue;
+}
+
+#case-studies-section {
+    grid-area: case-studies;
+    background-color: brown;
+}
+
+#clients-section {
+    grid-area: clients;
+    background-color: gold;
+}
+
+#our-services-section {
+    grid-area: our-services;
+    background-color: white;
+}
+
+#contact-us-section {
+    grid-area: contact-us;
+    background-color: silver;
+}
+
+#testimonials-section {
+    grid-area: testimonials;
+    background-color: purple;
+}
+
+#case-studies-section {
+    height: 100vh;
+    background-color: green;
+}
+
+#clients-section {
+    height: 100vh;
+    background-color: pink;
+}
+
+
+
+
+
+
+// ABOVE THE FOLD
+
 #hero {
     color: $hero-text-color;
+    grid-area: hero;
     @include laptop {
         display: flex;
         flex-flow: column;
@@ -65,7 +196,7 @@ body {
 }
 
 #hero-content-container {
-    padding: 10%;
+    padding: 10% 30%;
     display: flex;
     align-items: center;
     flex-grow: 1;
@@ -77,9 +208,9 @@ body {
     }
 
     #hero-content {
+        max-width: 800px;
         div {
             margin: 4% 0;
-            max-width: 800px;
         }
     }
 
