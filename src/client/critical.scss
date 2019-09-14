@@ -1,119 +1,26 @@
 @import './css/init.scss';
 @import './css/variables.scss';
 @import './css/mixins.scss';
+@import './main.scss';
 
 body {
     margin: 0;
     font-family: Lato;
-    overflow-x: hidden;
+
+    //TODO: temporary?
+    img { width: 100%; }
 }
 
 #app {
+    //this layout will likely not change for other devices
     @include laptop {
         display: grid;
         grid-template-rows: repeat(3, auto);
         grid-template-areas: 
             "hero"
-            "page-content-container"
+            "page-content-wrapper"
             "footer"
     }
-}
-
-#page-content-wrapper {
-    display: flex;
-    justify-content: center;
-
-    #page-content-container {
-        grid-area: page-content-container;
-        display: grid;
-        grid-template-rows: repeat(6, 800px);
-        grid-template-areas: 
-            "what-we-do"
-            "case-studies"
-            "clients"
-            "our-services"
-            "contact-us"
-            "testimonials"
-    }
-
-    #what-we-do-section {
-        @include laptop {
-            display: flex;
-            max-width: 1100px;
-        }
-
-        .text-section {
-            width: 50%;
-            background-color:white;
-            color: black;
-            padding: 5%;
-
-            div {
-                margin: 2% 0;
-            }
-
-            .text-container {
-                margin: 8% 0;
-
-                .title {
-                    font-size: 3em;
-                    font-weight: 600;
-                    color: black;
-                    font-family: Vollkorn;
-                }
-    
-                .subtitle {
-                    font-size: 0.8em;
-                    font-weight: 400;
-                    color: lighten(grey, 5);
-                    letter-spacing: 2px;
-                }
-
-                .description {
-                    p {
-                        letter-spacing: 1px;
-                        font-weight: 300;
-                    }
-                }
-
-                button {
-                    border-radius: 0;
-                    border-color: black;
-                    border-width: 1px;
-                    padding: 20px 25px;
-                    color: grey;
-                    font-size: 0.8em;
-                    letter-spacing: 4px;
-                }
-            }
-        }
-
-        .image-section {
-            width: 50%;
-            background-color:black;
-            color: white;
-
-        }
-    }
-}
-
-#footer {
-    grid-area: footer;
-}
-
-#what-we-do-section {
-    grid-area: what-we-do;
-    background-color: blue;
-}
-
-#case-studies-section {
-    grid-area: case-studies;
-    background-color: brown;
-}
-
-#clients-section {
-    grid-area: clients;
-    background-color: gold;
 }
 
 #our-services-section {
@@ -130,123 +37,3 @@ body {
     grid-area: testimonials;
     background-color: purple;
 }
-
-#case-studies-section {
-    height: 100vh;
-    background-color: green;
-}
-
-#clients-section {
-    height: 100vh;
-    background-color: pink;
-}
-
-
-
-
-
-
-// ABOVE THE FOLD
-
-#hero {
-    color: $hero-text-color;
-    grid-area: hero;
-    @include laptop {
-        display: flex;
-        flex-flow: column;
-    
-        // place holder for dev
-        height: 1000px;
-        background-color: teal;
-        
-        .hero-button {
-            background-color: $hero-button-color;
-            white-space: nowrap;
-            font-weight: 600;
-            color: $hero-text-color;
-            border-color: transparent;
-        }
-    }
-}
-
-#nav-bar {
-    @include laptop {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 20px;
-
-        #nav-links {
-            display: flex;
-            flex-wrap: nowrap;
-            justify-content: center;
-        }
-
-        .nav-link {
-            margin: 0% 5%;
-            font-size: 1em;
-        }
-
-        .hero-button {
-            border-radius: 20px;
-            padding: 10px 25px;
-            font-size: 0.9em;
-        }
-    }
-}
-
-#hero-content-container {
-    padding: 10% 30%;
-    display: flex;
-    align-items: center;
-    flex-grow: 1;
-
-    .hero-button {
-        border-radius: 20px;
-        padding: 10px 25px;
-        font-size: 0.9em;
-    }
-
-    #hero-content {
-        max-width: 800px;
-        div {
-            margin: 4% 0;
-        }
-    }
-
-    #hero-horizontal-rule {
-        background-color: $hero-button-color;
-        width: 10%;
-        height: 3px;
-        border-color: transparent;
-        display: inline-block;
-    }
-
-    #hero-title {
-        font-size: 3.6em;
-    }
-
-    #hero-description{
-        font-size: 1.2em;
-        letter-spacing: 0.1em;
-        font-weight: 400;
-        line-height: 150%;
-    }
-
-    .hero-button {
-        
-    }
-}
-
-#nav-logo {
-    background-color: $hero-button-color;
-}
-
-#widgets {
-    grid-area: widgets;
-
-    .widget {
-
-    }
-}
-

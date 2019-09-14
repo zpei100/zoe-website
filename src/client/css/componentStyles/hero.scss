@@ -1,0 +1,92 @@
+#hero {
+    grid-area: hero;
+
+    background-image: url("/assets/images/hero-background-02.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    color: $hero-text-color;
+
+    @include laptop {
+        display: flex;
+        flex-flow: column;
+        height: 100vh;
+    }
+
+    //Pink pill shaped buttons. Used twice in hero
+    .hero-button {
+        background-color: $hero-button-color;
+        white-space: nowrap;
+        font-weight: 600;
+        color: $hero-text-color;
+        border-color: transparent;
+    }
+}
+
+#nav-bar {
+    @include laptop {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px; 
+    }
+
+    #nav-links {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
+
+    .nav-link {
+        margin: 0% 5%;
+        font-size: 1em;
+    }
+
+    .hero-button {
+        border-radius: 20px;
+        padding: 10px 25px;
+        font-size: 0.9em;
+    }
+}
+
+#hero-content-container {
+    padding: 10% 30%;
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+
+    .hero-button {
+        border-radius: 20px;
+        padding: 10px 25px;
+        font-size: 0.9em;
+    }
+
+    #hero-content {
+        max-width: 800px;
+        div { margin: 4% 0; }
+    }
+
+    #hero-horizontal-rule {
+        background-color: $hero-button-color;
+        height: 3px;
+    }
+
+    #hero-title {
+        font-size: 3.6em;
+    }
+
+    #hero-description{
+        font-size: 1.2em;
+        letter-spacing: 0.1em;
+        font-weight: 400;
+        line-height: 150%;
+    }
+
+    .hero-button {
+        
+    }
+}
+
+#nav-logo {
+    background-color: $hero-button-color;
+}

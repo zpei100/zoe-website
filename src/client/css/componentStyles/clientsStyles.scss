@@ -1,0 +1,38 @@
+#clients-section {
+    grid-area: clients;
+    @extend %container;
+    flex-direction: column;
+
+    .header {
+        margin: 5% 0;
+        @extend %container;
+        flex-direction: column;
+
+        div {
+            margin: 2% 0;
+        }
+
+        .title {
+            font-size: 2em;
+            font-weight: 400;
+        }
+        .subtitle {
+            font-size: 0.7em;
+            color: grey;
+            letter-spacing: 3.5px;
+        }
+        
+    }
+
+    .clients-logos {
+
+        .image-container {
+            @extend %container;
+        }
+        display: grid;
+        width: 100%;
+        grid-gap: 50px;
+        grid-template-columns: repeat(5, auto);
+        grid-template-rows: repeat(2, auto);
+    }
+}

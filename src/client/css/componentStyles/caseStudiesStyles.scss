@@ -1,0 +1,74 @@
+#case-studies-section {
+    grid-area: case-studies;
+    @extend %container;
+    flex-direction: column;
+
+    //need to set container's height to contain its contents
+    height: auto;
+
+    .widgets {
+        width: 100%;
+
+        .widget {
+            width: 100%;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-family: "Playfair Display";
+            
+            .text-container {
+                @extend %container;
+                flex-direction: column;
+                position: absolute;
+                z-index: 2;
+
+                .title {
+                    font-size: 2.8em;
+                }
+
+                .subtitle {
+                    font-size: 1em;
+                }
+            }
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+
+            margin: 5% 0 0 0;
+            position: relative;
+        }
+    }
+
+    .header {
+        @extend %container;
+        flex-direction: column;
+        padding: 5% 0;
+        
+        div {
+            //margin between titile and subtitle
+            margin: 30px 0;
+        }
+
+        hr {
+            width: 5%;
+            background-color: grey;
+        }
+
+        .title {
+            font-size: 0.7em;
+            letter-spacing: 2px;
+            font-weight: 600;
+        }
+        
+        .subtitle {
+            font-size: 2.5em;
+            font-family: Cardo;
+        }
+    }
+
+    
+}

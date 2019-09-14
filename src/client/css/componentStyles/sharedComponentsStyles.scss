@@ -1,0 +1,22 @@
+//A container for the button
+.view-button {
+    padding: 50px 0;
+    
+    button {
+        border-radius: 0;
+        border-color: grey;
+        color: grey;
+        letter-spacing: 2px;
+        font-family: Helvetica;
+        padding: 20px 40px; 
+    }
+}
+
+//Horizontal rule. Used between title and subtitle
+hr {
+    width: 10%;
+    margin: 0;
+    height: 2px;
+    display: inline-block;
+    border-color: transparent;
+}
