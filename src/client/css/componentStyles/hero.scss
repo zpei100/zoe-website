@@ -1,7 +1,7 @@
 #hero {
     grid-area: hero;
 
-    background-image: url("/assets/images/hero-background-02.jpg");
+    background-image: url($hero-background-image-url);
     background-size: cover;
     background-repeat: no-repeat;
 
@@ -25,27 +25,42 @@
 
 #nav-bar {
     @include laptop {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 20px; 
+        display: grid;
+        grid-template-columns: minmax(0, 25%) auto minmax(0, 25%);
+        padding: 20px;
+        background-color: $nav-bar-background-color;
+    }
+
+    .logo-container {
+        @extend %container;
+        justify-content: flex-start;
+
+        #nav-logo {
+            
+        }
     }
 
     #nav-links {
         display: flex;
         flex-wrap: nowrap;
         justify-content: center;
+
+        .nav-link {
+            margin: 0% 5%;
+            font-size: 1em;
+            @extend %container;
+        }
     }
 
-    .nav-link {
-        margin: 0% 5%;
-        font-size: 1em;
-    }
+    .button-container {
+        @extend %container;
+        justify-content: flex-end;
 
-    .hero-button {
-        border-radius: 20px;
-        padding: 10px 25px;
-        font-size: 0.9em;
+        .hero-button {
+            border-radius: 20px;
+            padding: 10px 25px;
+            font-size: 0.9em;
+        }
     }
 }
 

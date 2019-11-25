@@ -2,6 +2,7 @@
 * { box-sizing: border-box }
 
 @import url(https://fonts.googleapis.com/css?family=Lato:100,300,400|Playfair+Display:400,700,400italic|Libre+Baskerville:400,700,400italic|Muli:300,400|Open+Sans:400,300,700|Oswald:400,700|Raleway:400,100,300,700|Montserrat:400,700|Merriweather:400,300,300italic,400italic,700|Bree+Serif|Vollkorn:400italic,400,700|Abril+Fatface|Cardo:400,400italic);
+@import url(<https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed|Bitter|Cabin|Cormorant+Garamond|Dancing+Script|Hind+Madurai|Josefin+Sans|Lobster|Mukta|Nanum+Gothic|Noto+Serif|Playfair+Display|Satisfy|Tinos|Varela+Round|Vollkorn|Yanone+Kaffeesatz&display=swap);
 
 .roboto {font-family: 'Roboto'}
 .open-sans{font-family: 'Open Sans';}
@@ -17,6 +18,23 @@
 .cardo{font-family: 'Cardo'}
 .abril-fatface{font-family: 'Abril Fatface'}
 .muli{font-family: 'Muli'}
+
+.playfair {font-family: 'Playfair Display', serif};
+.noto-serif {font-family: 'Noto Serif', serif};
+.nanum-gothic {font-family: 'Nanum Gothic', sans-serif}
+.josefin-sans {font-family: 'Josefin Sans', sans-serif};
+.mukta {font-family: 'Mukta', sans-serif};
+.cabin {font-family: 'Cabin', sans-serif};
+.bitter {font-family: 'Bitter', serif};
+.varela-round {font-family: 'Varela Round', sans-serif};
+.lobster {font-family: 'Lobster', cursive};
+.dancing-script {font-family: 'Dancing Script', cursive};
+.yanone-kaffeescatz {font-family: 'Yanone Kaffeesatz', sans-serif};
+.satisfy {font-family: 'Satisfy', cursive};
+.hind-madurai {font-family: 'Hind Madurai', sans-serif};
+.barlow-seim-condensed {font-family: 'Barlow Semi Condensed', sans-serif};
+.cormorant-garamond {font-family: 'Cormorant Garamond', serif};
+.tinos {font-family: 'Tinos', serif};
 
 /* ==== Weights, styles, letterspacing, etc. ==== */
 

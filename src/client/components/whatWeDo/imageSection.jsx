@@ -1,9 +1,13 @@
 import React from 'react'
 
-export default function imageSection() {
+export default ({imageSection}) => {
+    const {imageUrl} = imageSection;
     return (
         <div className="image-section">
-            <img src="/assets/images/what-we-do.jpg" />
+            <img src={imageUrl} style={{
+                objectFit: "cover",
+                height: "100%",
+            }}/>
         </div>
     )
 }

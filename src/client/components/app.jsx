@@ -8,22 +8,31 @@ import ContactUs from './ContactUs/contactUs.jsx';
 import Testimonials from './testimonials/testimonials.jsx';
 import Footer from './footer/footer.jsx';
 
+import applicationState from '../../applicationState.js';
+
 export default class App extends Component {
+  constructor() {
+    super();
+    this.state = applicationState;
+  }
+
   render() {
+    const {hero, caseStudies, clients, whatWeDo} = this.state;
+
     return (
       <React.Fragment>
-        <Hero />
+        <Hero hero={hero}/>
         <div id="page-content-wrapper">
           <div id="page-content-container">
-            <CaseStudies />
-            <WhatWeDo />
-            <Clients />
-            <OurServices />
+            <CaseStudies caseStudies={caseStudies} />
+            <WhatWeDo whatWeDo={whatWeDo}/>
+            <Clients clients={clients}/>
+            {/* <OurServices />
             <ContactUs />
-            <Testimonials />
+            <Testimonials /> */}
           </div>
         </div>
-        <Footer />
+        {/* <Footer /> */}
       </React.Fragment>
     );
   }
