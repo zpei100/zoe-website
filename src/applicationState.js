@@ -1,30 +1,34 @@
-class Widget {
-    constructor({imageUrl, title, subtitle}) {
-       this.image = {imageUrl};
-       this.title = {displayText: title};
-       this.subtitle = {displayText: subtitle}; 
-    }
-}
+const Widget = require('./dataClasses/Widget');
+const Text = require('./dataClasses/Text');
+const { getUrl, getAssetFromStatic } = require('./utility/helper');
 
 module.exports = {
     caseStudies: {
         header: {
-            subtitle: {
-                displayText: "Featured Case Studies"
-            },
-            title: {
-                displayText: "SHOPIFY & SHOPIFY PLUS"
-            }
+            subtitle: new Text("Featured Case Studies"),
+            title: new Text("SHOPIFY & SHOPIFY PLUS") ,
         },
         widgets: [
-            new Widget({imageUrl: "/assets/images/widget_background_04.jpg", title: "Reem Arca", subtitle: "SHOPIFY DEVELOPMENT & EXPERIENCE DESIGN"}),
-            new Widget({imageUrl: "/assets/images/widget_background_04.jpg", title: "Kith", subtitle: "HELPING KITH ACHIEVE MASSIVE SUCCESS"}),
-            new Widget({imageUrl: "/assets/images/widget_background_04.jpg", title: "O.N.S", subtitle: "FASHION MEETS TECHNOLOGY & COMMERCE"})
+            new Widget({
+                imageUrl: getAssetFromStatic("widget_background_04.jpg"), 
+                title: new Text("Reem Arca"),
+                subtitle: new Widget("SHOPIFY DEVELOPMENT & EXPERIENCE DESIGN")
+            }),
+            new Widget({
+                imageUrl: getAssetFromStatic("widget_background_04.jpg"), 
+                title: new Text("Kith"),
+                subtitle: new Text("HELPING KITH ACHIEVE MASSIVE SUCCESS"),
+            }),
+            new Widget({
+                imageUrl: getAssetFromStatic("widget_background_04.jpg"), 
+                title: new Text("O.N.S") ,
+                subtitle: new Text("FASHION MEETS TECHNOLOGY & COMMERCE") 
+            })
         ],
         viewMoreButtonDisplayText: "VIEW ALL CASE STUDIES"
     },
     hero: {
-        backgroundImageUrl: "/assets/images/hero_background_05.jpg",
+        backgroundImageUrl: getUrl(getAssetFromStatic("hero_background_05.jpg")),
         navbar: {
             links: [
                 {
@@ -69,16 +73,18 @@ module.exports = {
             }
         },
         clientsLogos: [
-            "/assets/images/logo_01.jpg",
-            "/assets/images/logo_01.jpg",
-            "/assets/images/logo_01.jpg",
-            "/assets/images/logo_01.jpg",
-            "/assets/images/logo_01.jpg",
-            "/assets/images/logo_01.jpg",
-            "/assets/images/logo_01.jpg",
-            "/assets/images/logo_01.jpg",
-            "/assets/images/logo_01.jpg",
-            "/assets/images/logo_01.jpg",
+            getAssetFromStatic("logo_01.jpg"),
+            getAssetFromStatic("logo_01.jpg"),
+            getAssetFromStatic("logo_01.jpg"),
+            getAssetFromStatic("logo_01.jpg"),
+            getAssetFromStatic("logo_01.jpg"),
+            getAssetFromStatic("logo_01.jpg"),
+            getAssetFromStatic("logo_01.jpg"),
+            getAssetFromStatic("logo_01.jpg"),
+            getAssetFromStatic("logo_01.jpg"),
+            getAssetFromStatic("logo_01.jpg"),
+            getAssetFromStatic("logo_01.jpg"),
+            getAssetFromStatic("logo_01.jpg"),
         ]
     },
     whatWeDo: {
@@ -104,7 +110,7 @@ module.exports = {
             }
         },
         imageSection: {
-            imageUrl: "/assets/images/what_we_do_background_02.jpg"
+            imageUrl: getAssetFromStatic("what_we_do_background_02.jpg"),
         }
     }
 }

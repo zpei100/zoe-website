@@ -4,11 +4,21 @@ import NavBar from './nav/navBar.jsx';
 
 export default ({hero}) => {
     const {navbar, content, backgroundImageUrl} = hero;
-    console.log(backgroundImageUrl)
+    console.log(backgroundImageUrl);
+
+    const heroBackgroundImageStyle = {backgroundImage: backgroundImageUrl};
+
     return (
-        <div id="hero" style={{backgroundImage: `url(${backgroundImageUrl}`}}>
-            <NavBar navbar={navbar} />
-            <HeroContentContainer content={content} backgroundIMageUrl={backgroundImageUrl}/>
+        <div 
+            id="hero" 
+            style={heroBackgroundImageStyle}
+        >
+            <NavBar 
+                navbar={navbar} 
+            />
+            <HeroContentContainer 
+                content={content} 
+            />
         </div>
     )
 }
