@@ -6,23 +6,23 @@ module.exports = {
     caseStudies: {
         header: {
             subtitle: new Text("Featured Case Studies"),
-            title: new Text("SHOPIFY & SHOPIFY PLUS") ,
+            title: new Text("") ,
         },
         widgets: [
             new Widget({
                 imageUrl: getAssetFromStatic("widget_background_04.jpg"), 
-                title: new Text("Reem Arca"),
-                subtitle: new Widget("SHOPIFY DEVELOPMENT & EXPERIENCE DESIGN")
+                title: new Text("Marketing"),
+                subtitle: new Widget("HELP YOU GET YOUR BRAND PUBLIC")
             }),
             new Widget({
                 imageUrl: getAssetFromStatic("widget_background_04.jpg"), 
-                title: new Text("Kith"),
-                subtitle: new Text("HELPING KITH ACHIEVE MASSIVE SUCCESS"),
+                title: new Text("Design"),
+                subtitle: new Text("DESIGN YOUR COMPANY'S BRAND AND LOGO"),
             }),
             new Widget({
                 imageUrl: getAssetFromStatic("widget_background_04.jpg"), 
-                title: new Text("O.N.S") ,
-                subtitle: new Text("FASHION MEETS TECHNOLOGY & COMMERCE") 
+                title: new Text("Events") ,
+                subtitle: new Text("PLAN YOUR EVENTS") 
             })
         ],
         viewMoreButtonDisplayText: "VIEW ALL CASE STUDIES"
@@ -32,16 +32,20 @@ module.exports = {
         navbar: {
             links: [
                 {
-                    displayText: "WORK"
+                    displayText: "What we do",
+                    elementID: "#what-we-do-section"
                 },
                 {
-                    displayText: "AGENCY"
+                    displayText: "Case Studies",
+                    elementID: "#case-studies-section"
                 },
                 {
-                    displayText: "EXPERTISE"
+                    displayText: "Clients",
+                    elementID: "#clients-section"
                 },
                 {
-                    displayText: "SERVICES"
+                    displayText: "Testimonials",
+                    elementID: "#testimonials-section"
                 }
             ],
             button: {
@@ -50,10 +54,10 @@ module.exports = {
         },
         content: {
             title: {
-                displayText: "We Create Memorable Websites That Sell"
+                displayText: "Zoe's amazing website"
             },
             description: {
-                displayText: "We partner with brands like yours to create websites your customers will remember, vastly improve your key metrics, and display your brand with pride."
+                displayText: "We partner with businesses like your's to create memorable brands through event planning and marketing."
             },
             button: {
                 displayText: "VIEW OUR WORK"
@@ -69,12 +73,10 @@ module.exports = {
                 displayText: "Clients"
             },
             subtitle: {
-                displayText: "FROM START-UPS TO GLOBAL BRANDS"
+                displayText: ""
             }
         },
         clientsLogos: [
-            getAssetFromStatic("logo_01.jpg"),
-            getAssetFromStatic("logo_01.jpg"),
             getAssetFromStatic("logo_01.jpg"),
             getAssetFromStatic("logo_01.jpg"),
             getAssetFromStatic("logo_01.jpg"),
@@ -93,7 +95,7 @@ module.exports = {
                 displayText: "What We Do"
             },
             subtitle: {
-                displayText: "ECOMMERCE DESIGN, DEVELOPMENT, MARKETING & OPTIMIZATION FOR D2C BRANDS."
+                displayText: "Marketing, branding, design, photography, event planning."
             },
             description: {
                 paragraphs: [

@@ -1,7 +1,7 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
 export default ({title: {displayText}}) => (
     <div id="hero-title">
-        {displayText}        
+            {displayText}        
     </div>
 )
