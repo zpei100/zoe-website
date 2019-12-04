@@ -2,6 +2,14 @@ const Widget = require('./dataClasses/Widget');
 const Text = require('./dataClasses/Text');
 const { getUrl, getAssetFromStatic } = require('./utility/helper');
 
+const colors = {
+    blue: "#1b4965",
+    white: "white",
+    black: "black",
+    grey: "#7c7a7a",
+    pink: "#ff5d73",
+}
+
 module.exports = {
     caseStudies: {
         header: {
@@ -30,26 +38,31 @@ module.exports = {
     hero: {
         backgroundImageUrl: getUrl(getAssetFromStatic("hero_background_05.jpg")),
         navbar: {
-            links: [
-                {
-                    displayText: "What we do",
-                    elementID: "#what-we-do-section"
-                },
-                {
-                    displayText: "Case Studies",
-                    elementID: "#case-studies-section"
-                },
-                {
-                    displayText: "Clients",
-                    elementID: "#clients-section"
-                },
-                {
-                    displayText: "Testimonials",
-                    elementID: "#testimonials-section"
-                }
-            ],
+            links: {
+                hrColor: colors.pink,
+                textColor: colors.white,
+                textElements: [
+                    {
+                        displayText: "What we do",
+                        elementID: "#what-we-do-section",
+                    },
+                    {
+                        displayText: "Case Studies",
+                        elementID: "#case-studies-section"
+                    },
+                    {
+                        displayText: "Clients",
+                        elementID: "#clients-section"
+                    },
+                    {
+                        displayText: "Testimonials",
+                        elementID: "#testimonials-section"
+                    }
+                ]
+            },
             button: {
-                displayText: "CONTACT US"
+                displayText: "CONTACT US",
+                backgroundColor: colors.pink,
             },
         },
         content: {
@@ -60,7 +73,11 @@ module.exports = {
                 displayText: "We partner with businesses like your's to create memorable brands through event planning and marketing."
             },
             button: {
-                displayText: "VIEW OUR WORK"
+                displayText: "VIEW OUR WORK",
+                backgroundColor: colors.pink,
+            },
+            hr: {
+                backgroundColor: colors.pink,
             }
         }
     },

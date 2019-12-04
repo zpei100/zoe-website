@@ -14,7 +14,6 @@
 
     //Pink pill shaped buttons. Used twice in hero
     .hero-button {
-        background-color: $hero-button-color;
         white-space: nowrap;
         font-weight: 600;
         color: $hero-text-color;
@@ -81,7 +80,6 @@
     }
 
     #hero-horizontal-rule {
-        background-color: $hero-button-color;
         height: 3px;
     }
 

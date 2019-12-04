@@ -3,11 +3,16 @@ import { scrollToElement } from '../../../../utility/helper';
 
 export default class NavLinks extends Component {
     render() {
-        const linksCount = this.props.links.length;
+        const {textElements, hrColor, textColor}= this.props;
+        const linksCount = textElements.length; 
+
         return (
             <div id="nav-links">
-                {this.props.links.map(link => 
-                    <NavLink link={link} minLinkWidth={`${100/linksCount}%`}/>
+                {textElements.map(link => 
+                    <NavLink {...link} 
+                        minLinkWidth={`${100/linksCount}%`} 
+                        hrColor={hrColor} 
+                        textColor={textColor}/>
                 )}
             </div>    
         )
@@ -17,48 +22,84 @@ export default class NavLinks extends Component {
 class NavLink extends Component {
     constructor() {
         super();
+        this.fontSizeStatic = "1em";
+        this.fontSizeEnlarge = "1.2em";
+
+        this.hrWidthStatic = "0%";
+        this.hrWidthEnlarge = "100%";
+
+        this.transitionDuration = "500ms";
+
         this.state = {
-            hrWidth: "0%",
-            fontSize: "100%",
+            hrWidth: this.hrWidthStatic,
+            fontSize: this.fontSizeStatic,
         }
+
+        this.enlargeLink = this.enlargeLink.bind(this);
+        this.shrinkLink = this.shrinkLink.bind(this);
+    }
+
+    enlargeLink() {
+        this.setState({
+            hrWidth: this.hrWidthEnlarge,
+            fontSize: this.fontSizeEnlarge
+        })
+    }
+
+    shrinkLink() {
+        this.setState({
+            hrWidth: this.hrWidthStatic,
+            fontSize: this.fontSizeStatic
+        })
     }
 
     render() {
+        const {hrColor, textColor, minLinkWidth, displayText, elementID} = this.props;
+        const {hrWidth, fontSize} = this.state;
+        const {transitionDuration} = this;
+
         const horizontalRuleStyle = {
-            backgroundColor: "red",
-            width: this.state.hrWidth,
-            position: "absolute",
-            bottom: 0,
-            transitionDuration: "500ms",
+            backgroundColor: hrColor,
+            width: hrWidth,
+            transitionDuration: transitionDuration,
             border: 0,
+            margin: "10px",
         } 
 
         const linkStyle = {
-            display: "flex",
-            flexDirection: "column",
-            position: "relative",
-            overflow: "hidden",
             cursor: "pointer",
-            minWidth: this.props.minLinkWidth,
+            minWidth: minLinkWidth,
             whiteSpace: "nowrap"
         }
 
         const displayTextStyle = {
-            transitionDuration: "500ms",
-            fontSize: this.state.fontSize,
+            transitionDuration: transitionDuration,
+            fontSize: fontSize,
+            color: textColor,
         }
 
-        const {displayText, elementID} = this.props.link;
+        const displayTextContainerStyle = {
+            //need lineheight, so even with text enlarges, container size does not change
+            lineHeight: "100%",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center"
+        }
+
         return (
             <div 
                 className="nav-link" 
                 style={linkStyle} 
                 onClick={() => scrollToElement(elementID)}
-                onMouseEnter={() => this.setState({hrWidth: "100%", fontSize: "120%"})}
-                onMouseLeave={() => this.setState({hrWidth: "0%", fontSize: "100%"})}
+                onMouseEnter={this.enlargeLink}
+                onMouseLeave={this.shrinkLink}
             >
-                <span style={displayTextStyle}>{displayText}</span>
-                <hr ref={hr => this.hr = hr} style={horizontalRuleStyle}/>
+                <div style={displayTextContainerStyle}>
+                    <div style={displayTextStyle}>
+                        {displayText}
+                    </div>
+                    <hr style={horizontalRuleStyle}/>
+                </div>
             </div>
         )
     }

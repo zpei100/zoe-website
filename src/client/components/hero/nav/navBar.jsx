@@ -6,7 +6,7 @@ import ButtonContainer from './buttonContainer.jsx';
 export default ({navbar: {links, button}}) => (
     <div id="nav-bar">
         <Logo />
-        <NavLinks links={links}/>
+        <NavLinks {...links}/>
         <ButtonContainer button={button} />
     </div>
 )
