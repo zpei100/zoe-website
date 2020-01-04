@@ -3,16 +3,21 @@ import { scrollToElement } from '../../../../utility/helper';
 
 export default class NavLinks extends Component {
     render() {
-        const {textElements, hrColor, textColor}= this.props;
+        const {textElements}= this.props;
         const linksCount = textElements.length; 
 
+        const navLinksStyle = {
+            zIndex: 2
+        }
+
         return (
-            <div id="nav-links">
-                {textElements.map(link => 
+            <div id="nav-links" style={navLinksStyle}>
+                {textElements.map((link, i) => 
                     <NavLink {...link} 
+                        {...this.props}
                         minLinkWidth={`${100/linksCount}%`} 
-                        hrColor={hrColor} 
-                        textColor={textColor}/>
+                        key={`link_${i}`}
+                    />
                 )}
             </div>    
         )
@@ -20,19 +25,13 @@ export default class NavLinks extends Component {
 }
 
 class NavLink extends Component {
-    constructor() {
+    constructor(props) {
         super();
-        this.fontSizeStatic = "1em";
-        this.fontSizeEnlarge = "1.2em";
-
-        this.hrWidthStatic = "0%";
-        this.hrWidthEnlarge = "100%";
-
-        this.transitionDuration = "500ms";
+        const { hr, fontSize } = props;
 
         this.state = {
-            hrWidth: this.hrWidthStatic,
-            fontSize: this.fontSizeStatic,
+            hrWidth: hr.width.static,
+            fontSize: fontSize.static,
         }
 
         this.enlargeLink = this.enlargeLink.bind(this);
@@ -41,25 +40,24 @@ class NavLink extends Component {
 
     enlargeLink() {
         this.setState({
-            hrWidth: this.hrWidthEnlarge,
-            fontSize: this.fontSizeEnlarge
+            hrWidth: this.props.hr.width.enlarged,
+            fontSize: this.props.fontSize.enlarged,
         })
     }
 
     shrinkLink() {
         this.setState({
-            hrWidth: this.hrWidthStatic,
-            fontSize: this.fontSizeStatic
+            hrWidth: this.props.hr.width.static,
+            fontSize: this.props.fontSize.static,
         })
     }
 
     render() {
-        const {hrColor, textColor, minLinkWidth, displayText, elementID} = this.props;
+        const {hr, textColor, minLinkWidth, displayText, elementID, transitionDuration} = this.props;
         const {hrWidth, fontSize} = this.state;
-        const {transitionDuration} = this;
 
         const horizontalRuleStyle = {
-            backgroundColor: hrColor,
+            backgroundColor: hr.color,
             width: hrWidth,
             transitionDuration: transitionDuration,
             border: 0,

@@ -1,5 +1,8 @@
 /* ===== font families ==== */
 * { box-sizing: border-box }
+body {
+    margin: 0;
+}
 
 @import url(https://fonts.googleapis.com/css?family=Lato:100,300,400|Playfair+Display:400,700,400italic|Libre+Baskerville:400,700,400italic|Muli:300,400|Open+Sans:400,300,700|Oswald:400,700|Raleway:400,100,300,700|Montserrat:400,700|Merriweather:400,300,300italic,400italic,700|Bree+Serif|Vollkorn:400italic,400,700|Abril+Fatface|Cardo:400,400italic);
 @import url(<https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed|Bitter|Cabin|Cormorant+Garamond|Dancing+Script|Hind+Madurai|Josefin+Sans|Lobster|Mukta|Nanum+Gothic|Noto+Serif|Playfair+Display|Satisfy|Tinos|Varela+Round|Vollkorn|Yanone+Kaffeesatz&display=swap);

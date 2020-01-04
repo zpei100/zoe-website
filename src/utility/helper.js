@@ -2,10 +2,6 @@ import $ from 'jquery';
 
 window.$ = $;
 
-const getUrl = url => `url(${url})`;
-
-const getAssetFromStatic = url => `/assets/images/${url}`;
-
 const scrollToElement = (elementID) => {
     const offsetTop = $(elementID)[0].offsetTop;
     const animationDuration = Math.log(offsetTop) * 100;
@@ -15,4 +11,4 @@ const scrollToElement = (elementID) => {
    }, animationDuration, "swing");
 }
 
-module.exports = { getUrl, getAssetFromStatic, scrollToElement }
+module.exports = { scrollToElement }

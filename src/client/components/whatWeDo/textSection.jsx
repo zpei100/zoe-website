@@ -13,7 +13,7 @@ export default function textSection({textSection: {title, subtitle, description,
                 <Subtitle subtitle={subtitle} />
             </div>
             <div className="text-container">
-                <Description description={description} />
+                <Description {...description} />
             </div>
             <div className="text-container">
                 <ContactButton button={button} />

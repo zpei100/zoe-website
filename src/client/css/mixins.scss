@@ -1,6 +1,8 @@
+@import './variables.scss';
+
 @mixin laptop {
     @media screen 
-        and (min-device-width: 1200px) 
+        and (min-device-width: $laptop-device-width) 
         // and (max-device-width: 1600px) 
         // and (-webkit-min-device-pixel-ratio: 2)
         // and (min-resolution: 192dpi) 
@@ -10,7 +12,7 @@
 };
 
 @mixin notebook {
-    @media screen and (min-device-width: 992) 
+    @media screen and (min-device-width: $notebook-device-width) 
     { 
         @content; 
     }
@@ -18,14 +20,14 @@
 };
 
 @mixin tablet {
-    @media screen and (min-device-width: 768px) 
+    @media screen and (min-device-width: $tablet-device-width) 
     { 
         @content; 
     }
 };
 
 @mixin phone {
-    @media screen and (min-device-width: 576) {
+    @media screen and (min-device-width: $phone-device-width) {
         @content
     }
 }

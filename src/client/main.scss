@@ -1,3 +1,7 @@
+@import './css/init.scss';
+@import './css/variables.scss';
+@import './css/mixins.scss';
+
 @import './css/componentStyles/hero.scss';
 @import './css/componentStyles/sharedComponentsStyles.scss';
 @import './css/componentStyles/whatWeDo.scss';
@@ -12,17 +16,21 @@
 
     //need seperate container. Wrapper places container in the center
     #page-content-container {
-        margin-top: 100px;
         display: grid;
-        grid-template-rows: repeat(6, auto);
-        grid-template-columns: 1100px;
-        grid-template-areas: 
-            "what-we-do"
-            "case-studies"
-            "clients"
-            "our-services"
-            "contact-us"
-            "testimonials"
+
+        @include notebook {
+            grid-template-rows: repeat(6, auto);
+            grid-row-gap: 50px;
+            margin-top: 100px;
+            grid-template-columns: 1100px;
+            grid-template-areas: 
+                "what-we-do"
+                "case-studies"
+                "clients"
+                "our-services"
+                "contact-us"
+                "testimonials"
+        }
     }
 }
 

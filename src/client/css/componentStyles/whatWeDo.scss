@@ -1,8 +1,12 @@
+@import '../mixins.scss';
+
 #what-we-do-section {
     grid-area: what-we-do;
     display: grid;
     grid-template-columns: repeat(2, calc((100% - 50px)/2));
     grid-gap: 50px;
+    @include tablet {
+    }
 
     .text-section {
         background-color:white;

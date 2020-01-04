@@ -8,7 +8,7 @@ import ContactUs from './ContactUs/contactUs.jsx';
 import Testimonials from './testimonials/testimonials.jsx';
 import Footer from './footer/footer.jsx';
 
-import applicationState from '../../applicationState.js';
+import applicationState from '../../applicationState/applicationState';
 
 export default class App extends Component {
   constructor() {
@@ -22,16 +22,16 @@ export default class App extends Component {
     return (
       <React.Fragment>
         <Hero hero={hero}/>
-        <div id="page-content-wrapper">
+        {/* <div id="page-content-wrapper">
           <div id="page-content-container">
-            <CaseStudies caseStudies={caseStudies} />
             <WhatWeDo whatWeDo={whatWeDo}/>
-            <Clients clients={clients}/>
-            {/* <OurServices />
-            <ContactUs />
-            <Testimonials /> */}
-          </div>
-        </div>
+            <CaseStudies caseStudies={caseStudies} />
+            <Clients clients={clients}/> */}
+            {/* <OurServices /> */}
+            {/* <ContactUs /> */}
+            {/* {/* <Testimonials /> */}
+          {/* </div> */}
+        {/* </div> */}
         {/* <Footer /> */}
       </React.Fragment>
     );
