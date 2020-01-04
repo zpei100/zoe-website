@@ -22,21 +22,20 @@ body {
         grid-template-areas: 
             "hero"
             "page-content-wrapper"
-            "footer"
     }
 }
 
-#our-services-section {
-    grid-area: our-services;
-    background-color: white;
-}
+// #our-services-section {
+//     grid-area: our-services;
+//     background-color: white;
+// }
 
-#contact-us-section {
-    grid-area: contact-us;
-    background-color: silver;
-}
+// #contact-us-section {
+//     grid-area: contact-us;
+//     background-color: silver;
+// }
 
-#testimonials-section {
-    grid-area: testimonials;
-    background-color: purple;
-}
+// #testimonials-section {
+//     grid-area: testimonials;
+//     background-color: purple;
+// }

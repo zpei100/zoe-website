@@ -1,21 +1,14 @@
 @import '../mixins.scss';
 
-#what-we-do-section {
-    grid-area: what-we-do;
+#about-us-section {
+    grid-area: about-us;
     display: grid;
     grid-template-columns: repeat(2, calc((100% - 50px)/2));
-    grid-gap: 50px;
-    @include tablet {
-    }
+    grid-column-gap: 50px;
 
     .text-section {
         background-color:white;
         color: black;
-        
-
-        div {
-            margin: 2% 0;
-        }
 
         .text-container {
             margin: 0 0 8% 0;

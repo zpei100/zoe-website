@@ -3,7 +3,7 @@ const Text = require('./dataClasses/Text');
 const { getImageAssetFromStatic } = require('./dataHelper');
 
 const hero = require('./hero');
-const whatWeDo = require('./whatWeDo');
+const aboutUs = require('./aboutUs');
 
 module.exports = {
     caseStudies: {
@@ -31,7 +31,7 @@ module.exports = {
         viewMoreButtonDisplayText: "VIEW ALL CASE STUDIES"
     },
     hero, 
-    whatWeDo,
+    aboutUs,
     clients: {
         viewAllButton: {
             displayText: "VIEW ALL"

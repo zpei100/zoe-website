@@ -17,7 +17,7 @@ export default ({hero}) => {
                 width: "100vw",
                 height: "100vh",
                 objectFit: "cover",
-                position: "fixed",
+                position: "absolute",
                 opacity: "30%"
             }}>
                 <source src={videoSource} type="video/mp4"></source>

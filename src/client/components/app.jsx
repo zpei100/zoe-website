@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Hero from './hero/hero.jsx';
 import CaseStudies from './caseStudies/caseStudies.jsx';
-import WhatWeDo from './whatWeDo/whatWeDo.jsx';
+import AboutUs from './AboutUs/aboutUs.jsx';
 import Clients from './clients/clients.jsx';
 import OurServices from './ourServices/ourServices.jsx';
 import ContactUs from './ContactUs/contactUs.jsx';
@@ -17,21 +17,21 @@ export default class App extends Component {
   }
 
   render() {
-    const {hero, caseStudies, clients, whatWeDo} = this.state;
+    const {hero, caseStudies, clients, aboutUs} = this.state;
 
     return (
       <React.Fragment>
         <Hero hero={hero}/>
-        {/* <div id="page-content-wrapper">
+        <div id="page-content-wrapper">
           <div id="page-content-container">
-            <WhatWeDo whatWeDo={whatWeDo}/>
-            <CaseStudies caseStudies={caseStudies} />
-            <Clients clients={clients}/> */}
+            <AboutUs aboutUs={aboutUs}/>
+            {/* <CaseStudies caseStudies={caseStudies} /> */}
+            {/* <Clients clients={clients}/> */}
             {/* <OurServices /> */}
             {/* <ContactUs /> */}
-            {/* {/* <Testimonials /> */}
-          {/* </div> */}
-        {/* </div> */}
+            {/* <Testimonials /> */}
+          </div>
+        </div>
         {/* <Footer /> */}
       </React.Fragment>
     );

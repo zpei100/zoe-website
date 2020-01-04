@@ -4,7 +4,7 @@
 
 @import './css/componentStyles/hero.scss';
 @import './css/componentStyles/sharedComponentsStyles.scss';
-@import './css/componentStyles/whatWeDo.scss';
+@import './css/componentStyles/aboutUs.scss';
 @import './css/componentStyles/caseStudiesStyles.scss';
 @import './css/componentStyles/clientsStyles.scss';
 @import './css/componentStyles/footerStyles.scss';
@@ -19,17 +19,12 @@
         display: grid;
 
         @include notebook {
-            grid-template-rows: repeat(6, auto);
+            grid-template-rows: repeat(1, auto);
             grid-row-gap: 50px;
             margin-top: 100px;
             grid-template-columns: 1100px;
             grid-template-areas: 
-                "what-we-do"
-                "case-studies"
-                "clients"
-                "our-services"
-                "contact-us"
-                "testimonials"
+                "about-us"
         }
     }
 }
