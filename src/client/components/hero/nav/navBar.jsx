@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import NavLinks from './navLinks.jsx';
-import Logo from './logo.jsx';
-import ButtonContainer from './buttonContainer.jsx';
+import ContactButton from '../../sharedElements/pillButton.jsx';
 
-export default ({navbar: {links, button}}) => (
+export default ({links, button}) => (
     <div id="nav-bar">
-        <Logo />
+        <div className="logo-container"></div>
         <NavLinks {...links}/>
-        <ButtonContainer button={button} />
+        <div className="button-container">
+            <ContactButton {...button} />
+        </div>
     </div>
 )

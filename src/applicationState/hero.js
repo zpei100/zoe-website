@@ -1,16 +1,38 @@
-const { getUrl, getImageAssetFromStatic, getVideoAssetFromStatic } = require('./dataHelper');
+const { getVideoAssetFromStatic } = require('./dataHelper');
 const { colors } = require('./constants');
 
+const buttonStyle = {
+    borderRadius: "20px",
+    padding: "10px 25px",
+    fontSize: "0.9em",
+    backgroundColor: colors.pink,
+    whiteSpace: "nowrap",
+    fontWeight: 600,
+    color: "white",
+    borderColor: "transparent",
+}
+
 module.exports = {
-    backgroundImageUrl: getUrl(getImageAssetFromStatic("hero_background_05.jpg")),
-    videoSource: getVideoAssetFromStatic("dance.mp4"), 
+    video: {
+        source: getVideoAssetFromStatic("dance.mp4"),  
+        style: {
+            width: "100vw",
+            height: "100vh",
+            objectFit: "cover",
+            position: "absolute",
+            opacity: "30%"
+        }
+    },
     navbar: {
         links: {
+            transitionDuration: "500ms",
+            textColor: colors.white,
+
             fontSize: {
                 static: "1em",
                 enlarged: "1.2em"
             },
-            transitionDuration: "500ms",
+
             hr: {
                 color: colors.pink,
                 width: {
@@ -18,43 +40,30 @@ module.exports = {
                     enlarged: "100%",
                 }
             },
-            textColor: colors.white,
+
             textElements: [
                 {
                     displayText: "Home",
                     elementId: "#hero"
                 },
-                // About Us === what we do
                 {
                     displayText: "About Us",
                     elementId: "#what-we-do-section",
                 },
-                //TODO: contact us section not yet exist
                 {
                     displayText: "Our Service",
                     elementId: ""
                 },
-                // {
-                //     displayText: "Our Service",
-                //     elementId: "#our-service-section"
-                // },
-                // {
-                //     displayText: "Case Studies",
-                //     elementID: "#case-studies-section"
-                // },
                 {
                     displayText: "Our Clients",
                     elementID: "#clients-section"
                 },
-                // {
-                //     displayText: "Testimonials",
-                //     elementID: "#testimonials-section"
-                // }
             ]
         },
+        
         button: {
             displayText: "CONTACT US",
-            backgroundColor: colors.pink,
+            style: {...buttonStyle},
         },
     },
     content: {
@@ -66,10 +75,14 @@ module.exports = {
         },
         button: {
             displayText: "VIEW OUR WORK",
-            backgroundColor: colors.pink,
+            style: {...buttonStyle}
         },
         hr: {
             backgroundColor: colors.pink,
+            style: {
+                backgroundColor: colors.pink,
+                height: "3px",
+            }
         }
     }
 }

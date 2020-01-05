@@ -1,3 +1,31 @@
 {
-  "git.ignoreLimitWarning": true
+  "git.ignoreLimitWarning": true,
+  "files.exclude": {
+    "dist": true,
+    ".vscode": true,
+    "node_modules": true,
+    "src/client/components/ContactUs": true,
+    "src/client/components/clients": true,
+    "src/client/components/footer": true,
+    "src/client/components/caseStudies": true,
+    "src/client/components/AboutUs": true,
+    "src/client/components/ourService": true,
+    "src/client/components/pageContentContainer": true,
+    "src/client/components/testimonials": true,
+    "src/client/css/componentStyles/aboutUs.scss": true,
+    "src/client/css/componentStyles/caseStudiesStyles.scss": true,
+    "src/client/css/componentStyles/footerStyles.scss": true,
+    "src/client/css/componentStyles/ourClientsStyles.scss": true,
+    "src/client/css/componentStyles/ourService.scss": true,
+    "src/client/css/componentStyles/sharedComponentsStyles.scss": true,
+    "src/client/css/init.scss": true,
+    "src/client/index.html": true,
+    "src/client/index.jsx": true,
+    "package.json": true,
+    ".babelrc": true,
+    ".gitignore": true,
+    "package-lock.json": true,
+    "todo.md": true,
+    "webpack.config.js": true
+  }
 }

@@ -1,9 +1,7 @@
 #hero {
     grid-area: hero;
-
     background-size: cover;
     background-repeat: no-repeat;
-
     color: $hero-text-color;
 
     @include laptop {
@@ -11,13 +9,28 @@
         flex-flow: column;
         height: 100vh;
     }
+}
 
-    //Pink pill shaped buttons. Used twice in hero
-    .hero-button {
-        white-space: nowrap;
-        font-weight: 600;
-        color: $hero-text-color;
-        border-color: transparent;
+#hero-content-container {
+    padding: 10% 30%;
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+
+    .content {
+        max-width: 800px;
+        & > div {margin: 4% 0};
+    }
+
+    hr {height: 3px;}
+
+    .title {font-size: 4vw;}
+
+    .description{
+        font-size: 1.2vw;
+        letter-spacing: 0.1vw;
+        font-weight: 400;
+        line-height: 150%;
     }
 }
 
@@ -32,10 +45,11 @@
     .logo-container {
         @extend %container;
         justify-content: flex-start;
+    }
 
-        #nav-logo {
-            
-        }
+    .button-container {
+        @extend %container;
+        justify-content: flex-end;
     }
 
     #nav-links {
@@ -44,61 +58,9 @@
         justify-content: center;
 
         .nav-link {
+            @extend %container;
             margin: 0% 5%;
             font-size: 1em;
-            @extend %container;
         }
     }
-
-    .button-container {
-        @extend %container;
-        justify-content: flex-end;
-
-        .hero-button {
-            border-radius: 20px;
-            padding: 10px 25px;
-            font-size: 0.9em;
-        }
-    }
-}
-
-#hero-content-container {
-    padding: 10% 30%;
-    display: flex;
-    align-items: center;
-    flex-grow: 1;
-
-    .hero-button {
-        border-radius: 20px;
-        padding: 10px 25px;
-        font-size: 0.9em;
-    }
-
-    #hero-content {
-        max-width: 800px;
-        div { margin: 4% 0; }
-    }
-
-    #hero-horizontal-rule {
-        height: 3px;
-    }
-
-    #hero-title {
-        font-size: 4vw;
-    }
-
-    #hero-description{
-        font-size: 1.2vw;
-        letter-spacing: 0.1vw;
-        font-weight: 400;
-        line-height: 150%;
-    }
-
-    .hero-button {
-        
-    }
-}
-
-#nav-logo {
-    background-color: $hero-button-color;
 }

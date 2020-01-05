@@ -6,12 +6,10 @@ export default class NavLinks extends Component {
         const {textElements}= this.props;
         const linksCount = textElements.length; 
 
-        const navLinksStyle = {
-            zIndex: 2
-        }
+        const style = {zIndex: 2};
 
         return (
-            <div id="nav-links" style={navLinksStyle}>
+            <div id="nav-links" style={style}>
                 {textElements.map((link, i) => 
                     <NavLink {...link} 
                         {...this.props}
