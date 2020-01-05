@@ -1,6 +1,6 @@
 const Widget = require('./dataClasses/Widget');
 const Text = require('./dataClasses/Text');
-const { getImageAssetFromStatic } = require('./dataHelper');
+const { getImageAssetFromStatic, getIconAssetFromStatic } = require('./dataHelper');
 
 const hero = require('./hero');
 const aboutUs = require('./aboutUs');
@@ -47,16 +47,16 @@ module.exports = {
             }
         },
         clientsLogos: [
-            getImageAssetFromStatic("logo_01.jpg"),
-            getImageAssetFromStatic("logo_01.jpg"),
-            getImageAssetFromStatic("logo_01.jpg"),
-            getImageAssetFromStatic("logo_01.jpg"),
-            getImageAssetFromStatic("logo_01.jpg"),
-            getImageAssetFromStatic("logo_01.jpg"),
-            getImageAssetFromStatic("logo_01.jpg"),
-            getImageAssetFromStatic("logo_01.jpg"),
-            getImageAssetFromStatic("logo_01.jpg"),
-            getImageAssetFromStatic("logo_01.jpg"),
+            getIconAssetFromStatic("logo_01.jpg"),
+            getIconAssetFromStatic("logo_01.jpg"),
+            getIconAssetFromStatic("logo_01.jpg"),
+            getIconAssetFromStatic("logo_01.jpg"),
+            getIconAssetFromStatic("logo_01.jpg"),
+            getIconAssetFromStatic("logo_01.jpg"),
+            getIconAssetFromStatic("logo_01.jpg"),
+            getIconAssetFromStatic("logo_01.jpg"),
+            getIconAssetFromStatic("logo_01.jpg"),
+            getIconAssetFromStatic("logo_01.jpg"),
         ]
     },
    

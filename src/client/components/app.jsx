@@ -25,9 +25,9 @@ export default class App extends Component {
         <div id="page-content-wrapper">
           <div id="page-content-container">
             <AboutUs aboutUs={aboutUs}/>
-            {/* <CaseStudies caseStudies={caseStudies} /> */}
-            {/* <Clients clients={clients}/> */}
             <OurService ourService={ourService}/>
+            <CaseStudies caseStudies={caseStudies} />
+            <Clients clients={clients}/>
             {/* <ContactUs /> */}
             {/* <Testimonials /> */}
           </div>

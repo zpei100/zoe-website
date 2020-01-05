@@ -3,7 +3,7 @@ const { colors } = require('./constants');
 
 module.exports = {
     backgroundImageUrl: getUrl(getImageAssetFromStatic("hero_background_05.jpg")),
-    videoSource: getVideoAssetFromStatic("trailer.mp4"), 
+    videoSource: getVideoAssetFromStatic("dance.mp4"), 
     navbar: {
         links: {
             fontSize: {
