@@ -3,9 +3,6 @@
 @import './css/mixins.scss';
 @import './main.scss';
 
-// Video style library;
-@import '~video-react/styles/scss/video-react';
-
 body {
     margin: 0;
     font-family: Lato;
@@ -24,11 +21,6 @@ body {
             "page-content-wrapper"
     }
 }
-
-// #our-services-section {
-//     grid-area: our-services;
-//     background-color: white;
-// }
 
 // #contact-us-section {
 //     grid-area: contact-us;

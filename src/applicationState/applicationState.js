@@ -4,6 +4,7 @@ const { getImageAssetFromStatic } = require('./dataHelper');
 
 const hero = require('./hero');
 const aboutUs = require('./aboutUs');
+const ourService = require('./ourService');
 
 module.exports = {
     caseStudies: {
@@ -32,6 +33,7 @@ module.exports = {
     },
     hero, 
     aboutUs,
+    ourService,
     clients: {
         viewAllButton: {
             displayText: "VIEW ALL"

@@ -3,7 +3,7 @@ import Hero from './hero/hero.jsx';
 import CaseStudies from './caseStudies/caseStudies.jsx';
 import AboutUs from './AboutUs/aboutUs.jsx';
 import Clients from './clients/clients.jsx';
-import OurServices from './ourServices/ourServices.jsx';
+import OurService from './ourService/ourService.jsx';
 import ContactUs from './ContactUs/contactUs.jsx';
 import Testimonials from './testimonials/testimonials.jsx';
 import Footer from './footer/footer.jsx';
@@ -17,7 +17,7 @@ export default class App extends Component {
   }
 
   render() {
-    const {hero, caseStudies, clients, aboutUs} = this.state;
+    const {hero, caseStudies, clients, aboutUs, ourService} = this.state;
 
     return (
       <React.Fragment>
@@ -27,7 +27,7 @@ export default class App extends Component {
             <AboutUs aboutUs={aboutUs}/>
             {/* <CaseStudies caseStudies={caseStudies} /> */}
             {/* <Clients clients={clients}/> */}
-            {/* <OurServices /> */}
+            <OurService ourService={ourService}/>
             {/* <ContactUs /> */}
             {/* <Testimonials /> */}
           </div>

@@ -2,9 +2,10 @@
 @import './css/variables.scss';
 @import './css/mixins.scss';
 
-@import './css/componentStyles/hero.scss';
 @import './css/componentStyles/sharedComponentsStyles.scss';
+@import './css/componentStyles/hero.scss';
 @import './css/componentStyles/aboutUs.scss';
+@import './css/componentStyles/ourService.scss';
 @import './css/componentStyles/caseStudiesStyles.scss';
 @import './css/componentStyles/clientsStyles.scss';
 @import './css/componentStyles/footerStyles.scss';
@@ -25,10 +26,7 @@
             grid-template-columns: 1100px;
             grid-template-areas: 
                 "about-us"
+                "our-service"
         }
     }
-}
-
-button {
-    cursor: pointer;
 }
