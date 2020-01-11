@@ -1,9 +1,7 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-export default ({displayText, style}) => (
-    <div id="nav-contact-button-container">
-        <button style={style}>
-            {displayText}
-        </button> 
-    </div>
+export default ({displayText}) => (
+    <button className="pill-button">
+        {displayText}
+    </button> 
 )

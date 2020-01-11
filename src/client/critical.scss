@@ -11,6 +11,22 @@ body {
     img { width: 100%; }
 }
 
+.pill-button {
+    border-radius: 20px;
+    padding: 10px 25px;
+    font-size: 0.9em;
+    background-color: $pink;
+    white-space: nowrap;
+    font-weight: 600;
+    color: white;
+    border-color: transparent;
+    cursor: pointer;
+
+    &:hover {
+        display:none;
+    }
+}
+
 #app {
     //this layout will likely not change for other devices
     @include laptop {
@@ -21,8 +37,6 @@ body {
             "page-content-wrapper"
     }
 }
-
-
 
 #hero {
     grid-area: hero;
