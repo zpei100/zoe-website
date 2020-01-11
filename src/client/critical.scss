@@ -21,3 +21,78 @@ body {
             "page-content-wrapper"
     }
 }
+
+
+
+#hero {
+    grid-area: hero;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: $hero-text-color;
+
+    @include laptop {
+        display: flex;
+        flex-flow: column;
+        height: 100vh;
+    }
+}
+
+#hero-content-container {
+    padding: 10% 30%;
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+
+    .content {
+        max-width: 800px;
+        & > div {margin: 4% 0};
+    }
+
+    hr {height: 3px;}
+
+    .title {font-size: 4vw;}
+
+    .description{
+        font-size: 1.2vw;
+        letter-spacing: 0.1vw;
+        font-weight: 400;
+        line-height: 150%;
+    }
+}
+
+#nav-bar {
+    @include laptop {
+        display: flex;
+        padding: 20px;
+        background-color: $nav-bar-background-color;
+        justify-content: flex-end;
+    }
+
+    .logo-container {
+        @extend %container;
+        justify-content: flex-start;
+    }
+
+    .button-container {
+        @extend %container;
+        justify-content: flex-end;
+    }
+
+    #nav-links {
+        margin: 0% 2%;
+        z-index: 2;
+        padding: 0;
+
+        .nav-link {
+            display: inline-block;
+            list-style: none;
+            text-align: center;
+            cursor: pointer;
+            transition-duration: 500ms;
+            white-space: nowrap;
+            font-size: 1.4em;
+            color: $pink;
+            padding: 0 20px;
+        }
+    }
+}

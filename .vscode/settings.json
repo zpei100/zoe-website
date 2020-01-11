@@ -1,7 +1,6 @@
 {
   "git.ignoreLimitWarning": true,
   "files.exclude": {
-    "dist": true,
     ".vscode": true,
     "node_modules": true,
     "src/client/components/ContactUs": true,

@@ -1,6 +1,9 @@
 const { getVideoAssetFromStatic } = require('./dataHelper');
 const { colors } = require('./constants');
 
+// const VIDEO_SOURCE = "dance.mp4";
+const VIDEO_SOURCE = "";
+
 const buttonStyle = {
     borderRadius: "20px",
     padding: "10px 25px",
@@ -14,7 +17,7 @@ const buttonStyle = {
 
 module.exports = {
     video: {
-        source: getVideoAssetFromStatic("dance.mp4"),  
+        source: getVideoAssetFromStatic(VIDEO_SOURCE),  
         style: {
             width: "100vw",
             height: "100vh",
@@ -29,18 +32,9 @@ module.exports = {
             textColor: colors.white,
 
             fontSize: {
-                static: "1em",
-                enlarged: "1.2em"
+                static: "1.4em",
+                enlarged: "2em"
             },
-
-            hr: {
-                color: colors.pink,
-                width: {
-                    static: "0%",
-                    enlarged: "100%",
-                }
-            },
-
             textElements: [
                 {
                     displayText: "Home",
